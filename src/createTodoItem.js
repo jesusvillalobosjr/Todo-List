@@ -1,7 +1,8 @@
 import TodoItem from "./TodoItem";
+import{format} from "date-fns"
 
 function createTodoItem(itemTitle){
-    const item = new TodoItem(itemTitle);
+    const item = new TodoItem(itemTitle,format(new Date(),"MM/dd/yyyy"));
     const todoItems = document.querySelector(".todo-items");
 
     const todoItem = document.createElement("div");
