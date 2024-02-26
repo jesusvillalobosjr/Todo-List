@@ -42,7 +42,8 @@ function createForm(textPlaceholder,buttonOneText,buttonTwoText){
     cancelButton.textContent = buttonTwoText;
     cancelButton.addEventListener("click", () => {
         if(addItemForm.parentElement.classList.contains("add-todo-item")){
-            console.log("Cancel Todo Item");
+            displayForm(addTodoItemContainer,addTodoItemButton,addItemForm);
+            titleInput.value = '';
         }else{
             console.log("Cancel Project");
         }
