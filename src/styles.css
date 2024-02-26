@@ -3,8 +3,8 @@ body,html{
 }
 
 .title-container{
-    background-color: grey;
-    padding: 20px 10px;
+    background-color: #454753;
+    padding: 20px;
 }
 
 .title-container .website-title{
@@ -23,9 +23,9 @@ body,html{
 
 .main-container .sidebar{
     background-color: lightgray;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 50px;
     padding: 20px 0;
 }
@@ -72,34 +72,88 @@ body,html{
 
 .main-container .current-page{
     background-color: whitesmoke;
-    flex-grow: 5;
     display: flex;
+    flex-basis: 75%;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     gap: 20px;
 }
 
-.main-container .current-page .current-page-title{
-
-}
-
 .main-container .current-page .add-todo-item{
-    transition: all 300ms;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 5px;
-    border-radius: 5px;
 }
 
-.main-container .current-page .add-todo-item:hover{
+.main-container .current-page .add-todo-item .add-todo-item-text:hover{
     background-color: darkgray;
     cursor: pointer;
 }
 
 .main-container .current-page .add-todo-item .add-todo-item-text{
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     font-size: 20px;
     margin: 0;
+    transition: all 300ms;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------- */
+
+.add-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.main-container .current-page .add-form{
+    border-radius: 5px;
+    width: 80%;
+}
+
+.add-form input[type="text"]{
+    width: 80%;
+    text-align: center;
+}
+
+.add-form .buttons-container{
+    display: flex;
+    gap: 20px;
+}
+
+.add-form .buttons-container .add-button{
+    background-color: #009900;
+    border: none;
+    color: white;
+}
+
+.add-form .buttons-container .add-button:hover{
+    background-color: #17B169;
+}
+
+.add-form .buttons-container .cancel-button{
+    background-color: #AA0000;
+    border: none;
+    color: white;
+}
+
+.add-form .buttons-container .cancel-button:hover{
+    background-color: #fd5c63;
+}
+
+.add-form .buttons-container button{
+    width: 100px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 300ms;
 }
