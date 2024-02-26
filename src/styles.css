@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body,html{
     margin: 0;
 }
@@ -105,7 +109,7 @@ body,html{
     border-radius: 5px;
 }
 
-/* ---------------------------------------------------- */
+/* ------------------------Form---------------------------- */
 
 .add-form{
     display: flex;
@@ -156,4 +160,49 @@ body,html{
     cursor: pointer;
     padding: 5px 10px;
     transition: all 300ms;
+}
+
+/* ----------------------------Todo Items--------------------------- */
+.current-page .todo-items{
+    padding: 2px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.current-page .todo-items .todo-item{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 5px;
+    background-color: darkgray;
+}
+
+.current-page .todo-items .todo-item .todo-item-left, .current-page .todo-items .todo-item .todo-item-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.current-page .todo-items .todo-item .todo-item-right .todo-item-delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.current-page .todo-items .todo-item .todo-item-left .todo-item-check{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.current-page .todo-items .todo-item .todo-item-left .todo-item-title{
+    margin: 0;
+}   
+
+.current-page .todo-items .todo-item .todo-item-right .todo-item-date{
+    margin: 0;
 }

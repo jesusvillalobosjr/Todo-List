@@ -1,5 +1,8 @@
 function displayForm(location,display,hide){
-    location.appendChild(display);
+    if(!document.contains(display))
+        location.appendChild(display);
+    else
+        display.style.display = "flex";
     hide.style.display = "none";
 }
 

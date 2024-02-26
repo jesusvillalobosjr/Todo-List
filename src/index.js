@@ -14,6 +14,8 @@ const addTodoItemContainer = document.querySelector(".add-todo-item");
 const addTodoItemButton = document.querySelector(".add-todo-item-text");
 const addProjectContainer = document.querySelector(".add-project-container");
 const addProjectButton = document.querySelector(".add-project");
+const addButton = document.querySelector(".add-button");
+const todoItemTitleText = document.querySelector(".title-text");
 
 currentButton.addEventListener("click",() => {
     loadPage(current);
