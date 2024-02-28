@@ -1,5 +1,6 @@
 import TodoItem from "./TodoItem";
 import{format} from "date-fns"
+import changeToDateInput from "./changeToDateInput";
 
 function createTodoItem(itemTitle){
     const item = new TodoItem(itemTitle,format(new Date(),"MM/dd/yyyy"));
@@ -20,10 +21,14 @@ function createTodoItem(itemTitle){
 
     const todoItemRight = document.createElement("div");
     todoItemRight.classList.add("todo-item-right");
+    const todoItemDateContainer = document.createElement("div");
+    todoItemDateContainer.classList.add("todo-item-date-container");
     const todoItemDate = document.createElement("h3");
     todoItemDate.classList.add("todo-item-date");
     todoItemDate.textContent = item.date;
-    todoItemRight.appendChild(todoItemDate);
+    todoItemDate.addEventListener("click",() => changeToDateInput(todoItemDateContainer,todoItemDate));
+    todoItemDateContainer.appendChild(todoItemDate);
+    todoItemRight.appendChild(todoItemDateContainer);
     const todoItemClose = document.createElement("div");
     todoItemClose.classList.add("todo-item-delete");
     todoItemClose.innerHTML = '<span class="material-symbols-outlined">close</span>';

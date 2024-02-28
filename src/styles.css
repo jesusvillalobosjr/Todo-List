@@ -205,7 +205,7 @@ body,html{
     margin: 0;
 }   
 
-.current-page .todo-items .todo-item .todo-item-right .todo-item-date{
+.current-page .todo-items .todo-item .todo-item-right .todo-item-date-container .todo-item-date{
     margin: 0;
     cursor: pointer;
 }
