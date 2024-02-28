@@ -3,6 +3,10 @@ class TodoItem{
         this.title = title;
         this.date = `${date}`;
     }
+
+    changeDate(newDate){
+        this.date = newDate;
+    }
 }
 
 export default TodoItem;

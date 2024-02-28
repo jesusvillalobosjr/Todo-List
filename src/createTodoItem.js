@@ -1,8 +1,6 @@
 import TodoItem from "./TodoItem";
 import{format} from "date-fns"
-import changeToDateInput from "./changeToDateInput";
-import removeItemFromContainer from "./removeItemFromContainer";
-import getTodoItemFromButton from "./getSecondDecendantAbove";
+import changeDate from "./changeDate";
 
 function createTodoItem(itemTitle){
     const item = new TodoItem(itemTitle,format(new Date(),"MM/dd/yyyy"));
@@ -15,7 +13,6 @@ function createTodoItem(itemTitle){
     todoItemLeft.classList.add("todo-item-left");
     const todoItemCheck = document.createElement("div");
     todoItemCheck.classList.add("todo-item-check");
-    todoItemCheck.addEventListener("click",(e) => removeItemFromContainer(todoItems,getTodoItemFromButton(e.currentTarget)));
     todoItemLeft.appendChild(todoItemCheck);
     const todoItemTitle  = document.createElement("h3");
     todoItemTitle.classList.add("todo-item-title");
@@ -29,13 +26,12 @@ function createTodoItem(itemTitle){
     const todoItemDate = document.createElement("h3");
     todoItemDate.classList.add("todo-item-date");
     todoItemDate.textContent = item.date;
-    todoItemDate.addEventListener("click",() => changeToDateInput(todoItemDateContainer,todoItemDate));
+    todoItemDate.addEventListener("click",() => changeDate(todoItemDateContainer,todoItemDate,item));
     todoItemDateContainer.appendChild(todoItemDate);
     todoItemRight.appendChild(todoItemDateContainer);
     const todoItemClose = document.createElement("div");
     todoItemClose.classList.add("todo-item-delete");
     todoItemClose.innerHTML = '<span class="material-symbols-outlined">close</span>';
-    todoItemClose.addEventListener("click",(e) => removeItemFromContainer(todoItems,getTodoItemFromButton(e.currentTarget)));
     todoItemRight.appendChild(todoItemClose);
 
     todoItem.appendChild(todoItemLeft);
