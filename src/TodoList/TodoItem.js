@@ -1,7 +1,7 @@
 class TodoItem{
-    constructor(title,date){
-        this.title = title;
-        this.date = `${date}`;
+    constructor(name,date){
+        this.name = name;
+        this.date = date;
     }
 
     changeDate(newDate){

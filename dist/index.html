@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <link rel="stylesheet" href="../src/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-</head>
-<body>
-    <header class="title-container">
-        <h1 class="website-title">Todo List App 🗒</h1>
-    </header>
-    <main class="main-container">
-        <div class="sidebar">
-            <div class="time-sort">
-                <div class="sidebar-container current"><p><span class="material-symbols-outlined">all_inbox</span>Current</p></div>
-                <div class="sidebar-container today"><p><span class="material-symbols-outlined">today</span>Today</p></div>
-                <div class="sidebar-container this-week"><p><span class="material-symbols-outlined">date_range</span>This Week</p></div>
-            </div>
-            <div class="projects">
-                <h1 class="projects-title">Projects</h1>
-                <div class="projects-list"></div>
-                <div class="sidebar-container add-project-container">
-                    <p class="add-project"><span class="material-symbols-outlined">add</span>Add Project</p>
+    <head>
+        <title>Todo List</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="../src/stylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <body>
+        <header class="title-container">
+            <h1 class="website-title">Todo List App 🗒</h1>
+        </header>
+        <main class="main-container">
+            <div class="sidebar">
+                <div class="time-sort">
+                    <div class="sidebar-container current"><p><span class="material-symbols-outlined">all_inbox</span>Current</p></div>
+                    <div class="sidebar-container today"><p><span class="material-symbols-outlined">today</span>Today</p></div>
+                    <div class="sidebar-container this-week"><p><span class="material-symbols-outlined">date_range</span>This Week</p></div>
+                </div>
+                <div class="projects">
+                    <h1 class="projects-title">Projects</h1>
+                    <div class="projects-list"></div>
+                    <div class="sidebar-container add-project-container">
+                        <p class="add-project"><span class="material-symbols-outlined">add</span>Add Project</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="current-page">
-            <h1 class="current-page-title">Current</h1>
-            <div class="add-todo-item">
-               <p class="add-todo-item-text"> <span class="material-symbols-outlined">add</span> Todo Item</p>
+            <div class="current-page">
+                <h1 class="current-page-title"></h1>
+                <div class="add-todo-item">
+                   <p class="add-todo-item-text"> <span class="material-symbols-outlined">add</span> Todo Item</p>
+                </div>
+                <div class="todo-items">
+                </div>
             </div>
-            <div class="todo-items">
-            </div>
-        </div>
-    </main>
-    <script src="bundle.js"></script>
-</body>
+        </main>
+        <script src="bundle.js"></script>
+    </body>
 </html>
